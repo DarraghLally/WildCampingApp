@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WildCampingApp.App">
+    <Application.Resources>
+        <!--Adding recources and styles-->
+        <ResourceDictionary>
+            <!--Colors-->
+            <Color x:Key="blueColor">#1E90FF</Color>
+            <Color x:Key="whiteColor">#FFFFFF</Color>
+            <Color x:Key="blackColor">#000000</Color>
+            <Color x:Key="darkOliveColor">#556B2F</Color>
+            <Color x:Key="redColor">#ff0000</Color>
+
+            <!--Logo for main page-->
+            <Style x:Key="normalLogo" TargetType="Label">
+                <Setter Property="BackgroundColor" 
+                        Value="{StaticResource blackColor}"/>
+                <Setter Property="TextColor" 
+                        Value="{StaticResource whiteColor}"/>
+            </Style>
+
+            <!--Nav Buttons for main page-->
+            <Style x:Key="normalButton" TargetType="Button">
+                <Setter Property="BackgroundColor" 
+                        Value="{StaticResource blueColor}"/>
+                <Setter Property="TextColor" 
+                        Value="{StaticResource whiteColor}"/>
+                <Setter Property="BorderRadius"
+                        Value="10"/>
+            </Style>
+
+            <!--GPS Buttons for main page-->
+            <Style x:Key="gpsButton" TargetType="Button">
+                <Setter Property="BackgroundColor" 
+                        Value="{StaticResource redColor}"/>
+                <Setter Property="TextColor" 
+                        Value="{StaticResource whiteColor}"/>
+                <Setter Property="BorderRadius"
+                        Value="10"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

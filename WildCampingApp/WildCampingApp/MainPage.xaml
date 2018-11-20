@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WildCampingApp"
+             x:Class="WildCampingApp.MainPage"
+             BackgroundColor="#556B2F">
+
+    <!-- Content holder stack -->
+    <StackLayout x:Name="slContentHolder" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
+        
+        <!-- Logo -->
+        <ContentView Padding="10, 10, 10, 10">
+            <Label Text="Welcome to Xamarin.Forms!" 
+               HorizontalOptions="Center"
+               VerticalOptions="Start" 
+                   Style="{StaticResource normalLogo}"/>
+        </ContentView>
+
+        <!--First row buttons, Health, Tools-->
+        <StackLayout x:Name="homePage_row_one" Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+            <Button x:Name="btnHealth"
+                    Text="Health"
+                    Margin="0, 0, 0, 0"
+                    Style="{StaticResource normalButton}"
+                    Clicked="btnHealth_Clicked"/>
+            <Button x:Name="btntools"
+                    Text="Tools"
+                    Margin="0, 0, 0, 0"
+                    Style="{StaticResource normalButton}"
+                    Clicked="btntools_Clicked"/>
+        </StackLayout>
+
+        <!--Second row buttons, Knots, CheckList-->
+        <StackLayout x:Name="homePage_row_two" Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
+            <Button x:Name="btnKnots"
+                    Text="Knots"
+                    Margin="0, 0, 0, 0"
+                    Style="{StaticResource normalButton}"
+                    Clicked="btnKnots_Clicked"/>
+            <Button x:Name="btnChecklist"
+                    Text="Checklist"
+                    Margin="0, 0, 0, 0"
+                    Style="{StaticResource normalButton}"
+                    Clicked="btnChecklist_Clicked"/>
+        </StackLayout>
+
+        <!--Get Long and Lat Button-->
+        <Button x:Name="btnLocation"
+                Text="LOCATION"
+                Margin="0, 0, 0, 0"
+                Style="{StaticResource gpsButton}"
+                Clicked="btnLocation_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
