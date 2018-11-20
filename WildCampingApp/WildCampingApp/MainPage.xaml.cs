@@ -16,7 +16,7 @@ namespace WildCampingApp
 
         private void btnHealth_Clicked(object sender, EventArgs e)
         {
-
+            //This is a comment
         }
 
         private void btntools_Clicked(object sender, EventArgs e)
