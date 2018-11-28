@@ -13,8 +13,17 @@ namespace WildCampingApp
         public MainPage()
         {
             InitializeComponent();
+            SetBackgroundImage();
         }
 
+        private void SetBackgroundImage()
+        {
+            var assembly = typeof(MainPage);
+            string strFileName = "WildCampingApp.Assets.Images.mainPage.png";
+            background_Img.Source = ImageSource.FromResource(strFileName, assembly);
+        }
+
+        //On Click methods
         async void btnHealth_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new HealthPage());

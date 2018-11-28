@@ -6,51 +6,85 @@
              BackgroundColor="#556B2F">
 
     <!-- Content holder stack -->
-    <StackLayout x:Name="slContentHolder" HorizontalOptions="CenterAndExpand" VerticalOptions="Center">
-        
-        <!-- Logo -->
-        <ContentView Padding="10, 10, 10, 10">
-            <Label Text="Wild Camping" 
-                   Margin="5, 10, 10, 10"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Start" 
-                   Style="{StaticResource normalLogo}"/>
-        </ContentView>
+    <StackLayout x:Name="slContentHolder">
+        <Grid>
+            
+            <!--main background-->
+            <Image x:Name="background_Img"
+                   Aspect="AspectFill"/>
 
-        <!--First row buttons, Health, Tools-->
-        <StackLayout x:Name="homePage_row_one" Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
-            <Button x:Name="btnHealth"
-                    Text="Health"
-                    Margin="0, 0, 0, 0"
-                    Style="{StaticResource normalButton}"
-                    Clicked="btnHealth_Clicked"/>
-            <Button x:Name="btntools"
-                    Text="Tools"
-                    Margin="0, 0, 0, 0"
-                    Style="{StaticResource normalButton}"
-                    Clicked="btntools_Clicked"/>
-        </StackLayout>
+            <Grid>
+                <!-- Logo -->
+                <ContentView Padding="10, 10, 10, 10">
+                    <Label Text="Wild Camping" 
+                           Margin="10, 10, 10, 10"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Start" 
+                           Style="{StaticResource normalLogo}"/>
+                </ContentView>
+            </Grid>
+            
+            <!--First row buttons, Health, Tools-->
+            <Grid x:Name="homePage_row_one" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="50,50,50,50">
+                
+                <!-- Grid dimensions (1 x 2) -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
 
-        <!--Second row buttons, Knots, CheckList-->
-        <StackLayout x:Name="homePage_row_two" Orientation="Horizontal" HorizontalOptions="Center" Margin="10">
-            <Button x:Name="btnKnots"
-                    Text="Knots"
-                    Margin="0, 0, 0, 0"
-                    Style="{StaticResource normalButton}"
-                    Clicked="btnKnots_Clicked"/>
-            <Button x:Name="btnChecklist"
-                    Text="Checklist"
-                    Margin="0, 0, 0, 0"
-                    Style="{StaticResource normalButton}"
-                    Clicked="btnChecklist_Clicked"/>
-        </StackLayout>
 
-        <!--Get Long and Lat Button-->
-        <Button x:Name="btnLocation"
-                Text="LOCATION"
-                Margin="0, 0, 0, 0"
-                Style="{StaticResource gpsButton}"
-                Clicked="btnLocation_Clicked"/>
+                <!-- Buttons-->
+                <Button x:Name="btnHealth"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Health"
+                        Style="{StaticResource normalButton}"
+                        Clicked="btnHealth_Clicked"/>
+                <Button x:Name="btntools"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="Tools"
+                        Style="{StaticResource normalButton}"
+                        Clicked="btntools_Clicked"/>
+                <Button x:Name="btnKnots"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Text="Knots"
+                        Style="{StaticResource normalButton}"
+                        Clicked="btnKnots_Clicked"/>
+                <Button x:Name="btnChecklist"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Text="Checklist"
+                        Style="{StaticResource normalButton}"
+                        Clicked="btnChecklist_Clicked"/>
+            </Grid>
+
+            <Grid x:Name="location_Btn" HorizontalOptions="Center" VerticalOptions="End" Margin="10,10,10,50">
+
+                <!-- Grid dimensions (1 x 1) -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                
+                <!--Get Long and Lat Button-->
+                <Button x:Name="btnLocation"
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="LOCATION"
+                        Style="{StaticResource gpsButton}"
+                        Clicked="btnLocation_Clicked"/>
+            </Grid>
+        </Grid>
     </StackLayout>
 
 </ContentPage>
