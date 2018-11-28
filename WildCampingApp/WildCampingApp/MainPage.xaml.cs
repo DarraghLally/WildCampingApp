@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-// API - Geolocation
-using Xamarin.Essentials;
+
 
 namespace WildCampingApp
 {
@@ -14,59 +13,33 @@ namespace WildCampingApp
         public MainPage()
         {
             InitializeComponent();
-            currentLocation();
         }
 
-        private void btnHealth_Clicked(object sender, EventArgs e)
+        async void btnHealth_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new HealthPage());
+            await Navigation.PushAsync(new HealthPage());
         }
 
-        private void btntools_Clicked(object sender, EventArgs e)
+        async void btntools_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ToolsPage());
+            await Navigation.PushAsync(new ToolsPage());
         }
 
-        private void btnKnots_Clicked(object sender, EventArgs e)
+        async void btnKnots_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new KnotsPage());
+            await Navigation.PushAsync(new KnotsPage());
         }
 
-        private void btnChecklist_Clicked(object sender, EventArgs e)
+        async void btnChecklist_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new ChecklistPage());
+            await Navigation.PushAsync(new ChecklistPage());
         }
 
-        private void btnLocation_Clicked(object sender, EventArgs e)
+        async void btnLocation_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new LocationPage());
+            await Navigation.PushAsync(new LocationPage());
         }
 
-        //Method for getting current location
-        public async void currentLocation() {
-            try
-            {
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium);
-                var location = await Geolocation.GetLocationAsync(request);
-
-                if (location != null)
-                {
-                    Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                }
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Handle not supported on device exception
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception
-            }
-            catch (Exception ex)
-            {
-                // Unable to get location
-            }
-
-        }
+        
     }
 }

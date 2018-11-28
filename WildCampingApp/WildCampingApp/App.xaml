@@ -15,7 +15,7 @@
             <!--Logo for main page-->
             <Style x:Key="normalLogo" TargetType="Label">
                 <Setter Property="BackgroundColor" 
-                        Value="{StaticResource blackColor}"/>
+                        Value="{StaticResource darkOliveColor}"/>
                 <Setter Property="TextColor" 
                         Value="{StaticResource whiteColor}"/>
             </Style>
@@ -30,7 +30,7 @@
                         Value="10"/>
             </Style>
 
-            <!--GPS Buttons for main page-->
+            <!-- GPS Buttons for main page-->
             <Style x:Key="gpsButton" TargetType="Button">
                 <Setter Property="BackgroundColor" 
                         Value="{StaticResource redColor}"/>
