@@ -5,20 +5,20 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="GPS Coordanites"
-                VerticalOptions="CenterAndExpand" 
+                VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand"/>
 
             <!--Label to display Lat-->
             <Label Text=""
                    x:Name="lblLocationDisplay_Lat"
-                    VerticalOptions="CenterAndExpand" 
+                    VerticalOptions="Center" 
                     HorizontalOptions="CenterAndExpand"/>
 
             <!--Label to display Long-->
             <Label Text=""
                    x:Name="lblLocationDisplay_Long"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"/>
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"/>
 
         </StackLayout>
     </ContentPage.Content>
