@@ -11,14 +11,16 @@
             <!--Label to display Lat-->
             <Label Text=""
                    x:Name="lblLocationDisplay_Lat"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"/>
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand"
+                   Style="{StaticResource locationLbl}"/>
 
             <!--Label to display Long-->
             <Label Text=""
                    x:Name="lblLocationDisplay_Long"
                    VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand"/>
+                   HorizontalOptions="CenterAndExpand"
+                   Style="{StaticResource locationLbl}"/>
 
         </StackLayout>
     </ContentPage.Content>

@@ -39,6 +39,12 @@
                 <Setter Property="BorderRadius"
                         Value="10"/>
             </Style>
+            
+            <!-- Labels in Location page -->
+            <Style x:Key="locationLbl" TargetType="Label">
+                <Setter Property="FontSize"
+                        Value="18"/>
+            </Style>
 
         </ResourceDictionary>
     </Application.Resources>
