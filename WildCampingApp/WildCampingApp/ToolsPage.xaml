@@ -4,9 +4,16 @@
              x:Class="WildCampingApp.ToolsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="btnTorch"
+                    Text="ON"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="btnTorch_Clicked"/>
+            <Button x:Name="btnTorch1"
+                    Text="OFF"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Clicked="btnTorch1_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
