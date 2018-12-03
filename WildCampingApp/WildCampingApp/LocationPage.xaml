@@ -11,7 +11,7 @@
             <!--Label to display Lat-->
             <Label Text=""
                    x:Name="lblLocationDisplay_Lat"
-                    VerticalOptions="Center" 
+                    VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand"/>
 
             <!--Label to display Long-->
