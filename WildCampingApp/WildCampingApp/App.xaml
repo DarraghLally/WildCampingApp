@@ -59,7 +59,7 @@
                 <Setter Property="BorderRadius"
                         Value="30"/>
             </Style>
-
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

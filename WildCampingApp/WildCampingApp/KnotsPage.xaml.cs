@@ -21,5 +21,6 @@ namespace WildCampingApp
             prusik.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.prusik.png");
             tarpSet.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.tarpLayout.png");
         }
-	}
+
+    }
 }
