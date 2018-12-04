@@ -46,6 +46,20 @@
                         Value="18"/>
             </Style>
 
+            <!-- Torch Buttons for main page-->
+            <Style x:Key="torchButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" 
+                        Value="{StaticResource blackColor}"/>
+                <Setter Property="TextColor" 
+                        Value="{StaticResource whiteColor}"/>
+                <Setter Property="WidthRequest"
+                        Value="60"/>
+                <Setter Property="HeightRequest"
+                        Value="60"/>
+                <Setter Property="BorderRadius"
+                        Value="30"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

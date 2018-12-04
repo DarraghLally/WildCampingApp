@@ -15,6 +15,11 @@ namespace WildCampingApp
 		public KnotsPage ()
 		{
 			InitializeComponent ();
-		}
+            knotTerms.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.knotTerm.png");
+            bowLine.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.bowline.png");
+            cloveHitch.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.cloveHitch.png");
+            prusik.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.prusik.png");
+            tarpSet.Source = ImageSource.FromResource("WildCampingApp.Assets.Images.tarpLayout.png");
+        }
 	}
 }
