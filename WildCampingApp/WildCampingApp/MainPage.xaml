@@ -13,17 +13,6 @@
             <Image x:Name="background_Img"
                    Aspect="AspectFill"/>
 
-            <Grid>
-                <!-- Logo -->
-                <ContentView Padding="10, 10, 10, 10">
-                    <Label Text="Wild Camping" 
-                           Margin="10, 10, 10, 10"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Start" 
-                           Style="{StaticResource normalLogo}"/>
-                </ContentView>
-            </Grid>
-            
             <!--First row buttons, Health, Tools-->
             <Grid x:Name="homePage_row_one" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="50,50,50,50">
                 
