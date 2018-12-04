@@ -9,7 +9,8 @@ using Android.OS;
 
 namespace WildCampingApp.Droid
 {
-    [Activity(Label = "WildCampingApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    //Changes here, app label and app icon for android
+    [Activity(Label = "Wild Camping", Icon = "@drawable/appImage", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
