@@ -46,10 +46,11 @@
                         Text="Health"
                         Style="{StaticResource normalButton}"
                         Clicked="btnHealth_Clicked"/>
+                <!--Note: Button function changed mid project, was tool, now torch-->
                 <Button x:Name="btntools"
                         Grid.Row="0"
                         Grid.Column="1"
-                        Text="Tools"
+                        Text="Torch"
                         Style="{StaticResource normalButton}"
                         Clicked="btntools_Clicked"/>
                 <Button x:Name="btnKnots"

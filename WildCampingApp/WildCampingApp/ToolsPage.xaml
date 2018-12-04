@@ -8,12 +8,22 @@
                     Text="ON"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand"
-                    Clicked="btnTorch_Clicked"/>
+                    Clicked="btnTorch_Clicked"
+                    Style="{StaticResource torchButtons}"
+                    />
             <Button x:Name="btnTorch1"
                     Text="OFF"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand"
-                    Clicked="btnTorch1_Clicked"/>
+                    Clicked="btnTorch1_Clicked"
+                    Style="{StaticResource torchButtons}"
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+    
+    
+    
+    
+    
+    

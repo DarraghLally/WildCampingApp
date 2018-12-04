@@ -2,11 +2,37 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WildCampingApp.KnotsPage">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!--Knots page will need scroll view so users can see all content-->
+        <ScrollView>    
+            <StackLayout Padding="15">
+                <Image x:Name="knotTerms" Aspect="AspectFit" VerticalOptions="Start"/>
+                <Label  VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        Text="KNOTS: The users of this app should have a general familiarity with the knots that are useful in the woods. This is just a reminder for those who may be under a bit of pressure or time constraints. We will look at four knots I find very useful for multiple tasks around the campsite."
+                />
+                <Image x:Name="bowLine" Aspect="AspectFit" VerticalOptions="CenterAndExpand"/>
+                <Label  VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        Text="BOWLINE: Versitile non-slip loop, easly opened knot which has many uses around the camp and further afeild."
+                />
+                <Image x:Name="cloveHitch" Aspect="AspectFit" VerticalOptions="CenterAndExpand"/>
+                <Label  VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        Text="ClOVE HITCH: Used for attaching guy-lines to steaks/anchors."
+                />
+                <Image x:Name="prusik" Aspect="AspectFit" VerticalOptions="CenterAndExpand"/>
+                <Label  VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        Text="PRUSIK KNOT: Slip knot used to tighten a tarp to a ridge line."
+                />
+                <Image x:Name="tarpSet" Aspect="AspectFit" VerticalOptions="CenterAndExpand"/>
+                <Label  VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand"
+                        Text="Example of a Diamond Shaped Tarp set up and indication as to where to use the Prusik Knots."
+                />
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

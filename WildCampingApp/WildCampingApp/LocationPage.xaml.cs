@@ -20,7 +20,7 @@ namespace WildCampingApp
             currentLocation();
 		}
 
-        //Method for getting current location - code from zamarin forms blog
+        //Method for getting current location - code shell from zamarin forms blog
         public async void currentLocation()
         {
             try
@@ -51,7 +51,8 @@ namespace WildCampingApp
                         compassHeadingLat = "South";
                     }
                     //Display to label
-                    String outputLat ="Latitude: " + Math.Abs(latDegrees) +  " degree's | " + Math.Abs((int)latMinutes) + " minute's | " + Math.Abs(latSecondsRound) + " second's " + compassHeadingLat;
+                    String outputLat ="Latitude:\n" + Math.Abs(latDegrees) +  " degree's\n" + Math.Abs((int)latMinutes)
+                        + " minute's\n" + Math.Abs(latSecondsRound) + " second's\n" + compassHeadingLat;
                     lblLocationDisplay_Lat.Text = outputLat;
 
                     //**Converting GPS Long to DMS Long              
@@ -75,10 +76,9 @@ namespace WildCampingApp
                         compassHeadingLon = "West";
                     }
                     //Display to label
-                    String outputLon = "Longitude: " + Math.Abs(lonDegrees) + " degree's | " + Math.Abs((int)lonMinutes) + " minute's | " + Math.Abs(lonSecondsRound) + " second's " + compassHeadingLon;
+                    String outputLon = "Longitude:\n" + Math.Abs(lonDegrees) + " degree's\n" + Math.Abs((int)lonMinutes) 
+                        + " minute's\n" + Math.Abs(lonSecondsRound) + " second's\n" + compassHeadingLon;
                     lblLocationDisplay_Long.Text = outputLon;
-
-
                 }
             }
             catch (FeatureNotSupportedException fnsEx)

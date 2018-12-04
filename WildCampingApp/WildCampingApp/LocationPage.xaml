@@ -4,10 +4,7 @@
              x:Class="WildCampingApp.LocationPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="GPS Coordanites"
-                VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand"/>
-
+            
             <!--Label to display Lat-->
             <Label Text=""
                    x:Name="lblLocationDisplay_Lat"
