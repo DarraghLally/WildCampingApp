@@ -4,32 +4,39 @@
              x:Class="WildCampingApp.LocationPage"
              BackgroundColor="Gray">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
+                
+                <!--Components to display Latitude-->
+                <Label HorizontalOptions="Center" Text="LATITUDE" Margin="10,100,10,10" FontAttributes="Bold" FontSize="Large"/>
+                <Frame BorderColor="Black"
+                       Padding="10, 10, 10, 10"
+                       Margin="10, 0, 10, 10"
+                       BackgroundColor="White">
+                    <!--Label to display Lat-->
+                    <Label Text=""
+                           x:Name="lblLocationDisplay_Lat"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                           Style="{StaticResource locationLbl}"/>
+                </Frame>
 
-            <Frame BorderColor="Black"
-                   Padding="10, 10, 10, 10"
-                   Margin="10, 100, 10, 20"
-                   BackgroundColor="White">
-                <!--Label to display Lat-->
-                <Label Text=""
-                       x:Name="lblLocationDisplay_Lat"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
-                       Style="{StaticResource locationLbl}"/>
-            </Frame>
+                <!--Components to display Longitude-->
+                <Label HorizontalOptions="Center" Text="LONGITUDE" Margin="10,50,10,10" FontAttributes="Bold" FontSize="Large"/>
+                <Frame BorderColor="Black"
+                       Padding="10, 10, 10, 10"
+                       Margin="10, 0, 10, 10"
+                       BackgroundColor="White">
+                    <!--Label to display Long-->
+                    <Label Text=""
+                           x:Name="lblLocationDisplay_Long"
+                           VerticalOptions="CenterAndExpand" 
+                           HorizontalOptions="CenterAndExpand"
+                           Style="{StaticResource locationLbl}"/>
+                </Frame>
 
-            <Frame BorderColor="Black"
-                   Padding="10, 10, 10, 10"
-                   Margin="10, 200, 10, 20"
-                   BackgroundColor="White">
-                <!--Label to display Long-->
-                <Label Text=""
-                       x:Name="lblLocationDisplay_Long"
-                       VerticalOptions="CenterAndExpand" 
-                       HorizontalOptions="CenterAndExpand"
-                       Style="{StaticResource locationLbl}"/>
-            </Frame>
+            </StackLayout>
+        </ScrollView>
 
-        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
