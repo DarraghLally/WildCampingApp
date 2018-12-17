@@ -10,15 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Images\112.png" />
     <None Remove="Assets\Images\bowline.png" />
     <None Remove="Assets\Images\cloveHitch.png" />
     <None Remove="Assets\Images\knotTerm.png" />
     <None Remove="Assets\Images\mainPage.png" />
     <None Remove="Assets\Images\prusik.png" />
+    <None Remove="Assets\Images\sos.png" />
+    <None Remove="Assets\Images\STOP.png" />
     <None Remove="Assets\Images\tarpLayout.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Images\112.png" />
+    <EmbeddedResource Include="Assets\Images\sos.png" />
+    <EmbeddedResource Include="Assets\Images\STOP.png" />
     <EmbeddedResource Include="Assets\Images\tarpLayout.png" />
   </ItemGroup>
 

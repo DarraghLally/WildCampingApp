@@ -32,7 +32,7 @@
                 <Button x:Name="btnHealth"
                         Grid.Row="0"
                         Grid.Column="0"
-                        Text="Health"
+                        Text="Safety"
                         Style="{StaticResource normalButton}"
                         Clicked="btnHealth_Clicked"/>
                 <!--Note: Button function changed mid project, was tool, now torch-->

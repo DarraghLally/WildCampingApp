@@ -11,7 +11,8 @@
             <Color x:Key="blackColor">#000000</Color>
             <Color x:Key="darkOliveColor">#556B2F</Color>
             <Color x:Key="redColor">#ff0000</Color>
-
+            <Color x:Key="greyColor">#8d9096</Color>
+            
             <!--Logo for main page-->
             <Style x:Key="normalLogo" TargetType="Label">
                 <Setter Property="BackgroundColor" 
@@ -44,20 +45,26 @@
             <Style x:Key="locationLbl" TargetType="Label">
                 <Setter Property="FontSize"
                         Value="18"/>
+                <Setter Property="FontAttributes"
+                        Value="Bold"/>
+                <Setter Property="FontFamily"
+                        Value="Sanserif"/>
             </Style>
 
             <!-- Torch Buttons for main page-->
             <Style x:Key="torchButtons" TargetType="Button">
                 <Setter Property="BackgroundColor" 
-                        Value="{StaticResource blackColor}"/>
+                        Value="{StaticResource greyColor}"/>
                 <Setter Property="TextColor" 
-                        Value="{StaticResource whiteColor}"/>
+                        Value="{StaticResource blackColor}"/>
                 <Setter Property="WidthRequest"
-                        Value="60"/>
+                        Value="90"/>
                 <Setter Property="HeightRequest"
-                        Value="60"/>
+                        Value="90"/>
                 <Setter Property="BorderRadius"
-                        Value="30"/>
+                        Value="45"/>
+                <Setter Property="FontAttributes"
+                        Value="Bold"/>
             </Style>
             
         </ResourceDictionary>
