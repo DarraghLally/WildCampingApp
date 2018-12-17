@@ -37,5 +37,6 @@ namespace WildCampingApp
             base.OnDisappearing();
             //Compass.Stop();
         }
+
     }
 }

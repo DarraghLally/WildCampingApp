@@ -51,8 +51,8 @@ namespace WildCampingApp
                         compassHeadingLat = "South";
                     }
                     //Display to label
-                    String outputLat ="Latitude:\n" + Math.Abs(latDegrees) +  " degree's\n" + Math.Abs((int)latMinutes)
-                        + " minute's\n" + Math.Abs(latSecondsRound) + " second's\n" + compassHeadingLat;
+                    String outputLat = compassHeadingLat + "\n" + Math.Abs(latDegrees) +  " degree's\n" + Math.Abs((int)latMinutes)
+                        + " minute's\n" + Math.Abs(latSecondsRound) + " second's";
                     lblLocationDisplay_Lat.Text = outputLat;
 
                     //**Converting GPS Long to DMS Long              
@@ -76,8 +76,8 @@ namespace WildCampingApp
                         compassHeadingLon = "West";
                     }
                     //Display to label
-                    String outputLon = "Longitude:\n" + Math.Abs(lonDegrees) + " degree's\n" + Math.Abs((int)lonMinutes) 
-                        + " minute's\n" + Math.Abs(lonSecondsRound) + " second's\n" + compassHeadingLon;
+                    String outputLon = compassHeadingLon + "\n" + Math.Abs(lonDegrees) + " degree's\n" + Math.Abs((int)lonMinutes) 
+                        + " minute's\n" + Math.Abs(lonSecondsRound) + " second's";
                     lblLocationDisplay_Long.Text = outputLon;
                 }
             }
