@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 //Geo location API
@@ -17,6 +16,7 @@ namespace WildCampingApp
 		public LocationPage ()
 		{
 			InitializeComponent ();
+            //Calling location
             currentLocation();
 		}
 
@@ -83,18 +83,17 @@ namespace WildCampingApp
             }
             catch (FeatureNotSupportedException fnsEx)
             {
-                lblLocationDisplay_Lat.Text = "Unable to get Latitude";
-                lblLocationDisplay_Long.Text = "Unable to get Longitude";
+                lblLocationDisplay_Lat.Text = "Unable to get Location";
+                lblLocationDisplay_Long.Text = "Feature Not Supported";
             }
             catch (PermissionException pEx)
             {
-                lblLocationDisplay_Lat.Text = "Unable to get Latitude";
-                lblLocationDisplay_Long.Text = "Unable to get Longitude";
+                lblLocationDisplay_Lat.Text = "Unable to get Location";
+                lblLocationDisplay_Long.Text = "Please Enable Location Settings";
             }
             catch (Exception ex)
             {
-                lblLocationDisplay_Lat.Text = "Unable to get Latitude";
-                lblLocationDisplay_Long.Text = "Unable to get Longitude";
+                lblLocationDisplay_Lat.Text = "Unable to get Location";
             }
 
         }

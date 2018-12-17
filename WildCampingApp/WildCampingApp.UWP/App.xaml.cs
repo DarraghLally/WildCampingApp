@@ -52,6 +52,7 @@ namespace WildCampingApp.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
+                //IF ERROR OCCURS HERE, PLEASE STOP AND RETRY.
                 Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)

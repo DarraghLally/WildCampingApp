@@ -1,12 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WildCampingApp.HealthPage">
+             x:Class="WildCampingApp.HealthPage"
+             BackgroundColor="#556B2F">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Padding="15">
+
+                <!--Emergancy Contact Number (112)-->
+                <Frame BorderColor="Black"
+                       Padding="10, 10, 10, 10"
+                       Margin="10, 0, 10, 20"
+                       BackgroundColor="White">
+                    <!--Frame can have only one child, I use a stacklayout to hold both the image and the label to overcome the problem-->
+                    <StackLayout>
+                        <Image x:Name="emNumImage" Aspect="AspectFit" VerticalOptions="Start" HeightRequest="240" WidthRequest="281"/>
+                        <Label VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand"
+                               FontAttributes="Bold"
+                               BackgroundColor="White"
+                               x:Name="lbl112"
+                               Text="This number is used throughout Europe and will get you through to the countries Emergancy Service's Switch, ask for the relevent Emergancy Service providing as much detail to your situation as you can."/>
+                    </StackLayout>
+                </Frame>
+
+                <!--STOP , think, observe, plan-->
+                <Frame BorderColor="Black"
+                       Padding="10, 10, 10, 10"
+                       Margin="10, 0, 10, 20"
+                       BackgroundColor="White">
+                    <StackLayout>
+                        <Image x:Name="stopImage" Aspect="AspectFit" VerticalOptions="Start" HeightRequest="240" WidthRequest="281"/>
+                        <Label VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand"
+                               FontAttributes="Bold"
+                               BackgroundColor="White"
+                               x:Name="lblSTOP"
+                               Text=""/>
+                    </StackLayout>
+                </Frame>
+                
+                <!--SOS, Save Our Souls, How to-->
+                <Frame BorderColor="Black"
+                       Padding="10, 10, 10, 10"
+                       Margin="10, 0, 10, 20"
+                       BackgroundColor="White">
+                    <StackLayout>
+                        <Image x:Name="sosImage" Aspect="AspectFit" VerticalOptions="Start" HeightRequest="240" WidthRequest="281"/>
+                        <Label VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand"
+                               FontAttributes="Bold"
+                               BackgroundColor="White"
+                               x:Name="lblSOS"
+                               Text=""/>
+                    </StackLayout>
+                </Frame>
+                
+                
+            </StackLayout>
+            
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

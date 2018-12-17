@@ -17,24 +17,25 @@ namespace WildCampingApp
 		{
 			InitializeComponent ();
 
-            //Compass.ReadingChanged += Compass_ReadingChanged;
+            Compass.ReadingChanged += Compass_ReadingChanged;
 		}
 
-        //private void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
-        //{
-        //    lblCompass.Text = $"Heading: {e.Reading.HeadingMagneticNorth}";
-            
-        //}
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //    Compass.Start(SensorSpeed.Ui);
-        //}
+        private void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
+        {
+            lblCompass.Text = $"Heading: {e.Reading.HeadingMagneticNorth}";
+        }
 
-        //protected override void OnDisappearing()
-        //{
-        //    base.OnDisappearing();
-        //    Compass.Stop();
-        //}
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            //Method not supported??
+            //Compass.Start(SensorSpeed.UI);
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+            //Compass.Stop();
+        }
     }
 }
