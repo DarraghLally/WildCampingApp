@@ -4,10 +4,11 @@
              x:Class="WildCampingApp.ChecklistPage">
     <ContentPage.Content>
         <StackLayout>
+            <!--Display Compass Heading-->
             <Label x:Name="lblCompass"
-                Text=""
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   Text=""
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

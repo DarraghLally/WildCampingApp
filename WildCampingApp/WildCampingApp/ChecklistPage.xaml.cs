@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+//Adding Essentials Library
 using Xamarin.Essentials;
 
 namespace WildCampingApp
@@ -16,26 +16,26 @@ namespace WildCampingApp
 		public ChecklistPage ()
 		{
 			InitializeComponent ();
-
             Compass.ReadingChanged += Compass_ReadingChanged;
-		}
+        }
 
-        private void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
+        void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
+            //LabelInfo.Text = $"Heading: {e.Reading.HeadingMagneticNorth}";
+            //ImageArrow.Rotation = e.Reading.HeadingMagneticNorth;
             lblCompass.Text = $"Heading: {e.Reading.HeadingMagneticNorth}";
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            //Method not supported??
-            //Compass.Start(SensorSpeed.UI);
+            Compass.Start(SensorSpeed.UI);
         }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            //Compass.Stop();
+            Compass.Stop();
         }
 
     }

@@ -51,20 +51,22 @@
                         Value="Sanserif"/>
             </Style>
 
-            <!-- Torch Buttons for main page-->
+            <!-- Torch Button -->
             <Style x:Key="torchButtons" TargetType="Button">
                 <Setter Property="BackgroundColor" 
                         Value="{StaticResource greyColor}"/>
                 <Setter Property="TextColor" 
                         Value="{StaticResource blackColor}"/>
                 <Setter Property="WidthRequest"
-                        Value="90"/>
+                        Value="120"/>
                 <Setter Property="HeightRequest"
-                        Value="90"/>
+                        Value="120"/>
                 <Setter Property="BorderRadius"
-                        Value="45"/>
+                        Value="60"/>
                 <Setter Property="FontAttributes"
                         Value="Bold"/>
+                <Setter Property="BorderColor"
+                        Value="Gold"/>
             </Style>
             
         </ResourceDictionary>
