@@ -12,14 +12,6 @@
             <Color x:Key="darkOliveColor">#556B2F</Color>
             <Color x:Key="redColor">#ff0000</Color>
             <Color x:Key="greyColor">#8d9096</Color>
-            
-            <!--Logo for main page-->
-            <Style x:Key="normalLogo" TargetType="Label">
-                <Setter Property="BackgroundColor" 
-                        Value="{StaticResource darkOliveColor}"/>
-                <Setter Property="TextColor" 
-                        Value="{StaticResource whiteColor}"/>
-            </Style>
 
             <!--Nav Buttons for main page-->
             <Style x:Key="normalButton" TargetType="Button">

@@ -8,13 +8,12 @@
     <!-- Content holder stack -->
     <StackLayout x:Name="slContentHolder">
         <Grid>
-            
             <!--main background-->
             <Image x:Name="background_Img"
                    Aspect="AspectFill"/>
 
             <!--First row buttons, Health, Tools-->
-            <Grid x:Name="homePage_row_one" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" Margin="50,50,50,50">
+            <Grid x:Name="homePage_row_one" HorizontalOptions="Center" VerticalOptions="Center" Margin="10,10,10,50">
                 
                 <!-- Grid dimensions (1 x 2) -->
                 <Grid.RowDefinitions>
@@ -28,32 +27,43 @@
                 </Grid.ColumnDefinitions>
 
 
-                <!-- Buttons-->
+                <!--Buttons-->
+                <!--Health Button-->
                 <Button x:Name="btnHealth"
                         Grid.Row="0"
                         Grid.Column="0"
                         Text="Safety"
                         Style="{StaticResource normalButton}"
-                        Clicked="btnHealth_Clicked"/>
+                        Clicked="btnHealth_Clicked"
+                        WidthRequest="120"
+                        HorizontalOptions="Center"/>
                 <!--Note: Button function changed mid project, was tool, now torch-->
                 <Button x:Name="btntools"
                         Grid.Row="0"
                         Grid.Column="1"
                         Text="Torch"
                         Style="{StaticResource normalButton}"
-                        Clicked="btntools_Clicked"/>
+                        Clicked="btntools_Clicked"
+                        WidthRequest="120"
+                        HorizontalOptions="Center"/>
+                <!--Knots Button-->
                 <Button x:Name="btnKnots"
                         Grid.Row="2"
                         Grid.Column="0"
                         Text="Knots"
                         Style="{StaticResource normalButton}"
-                        Clicked="btnKnots_Clicked"/>
+                        Clicked="btnKnots_Clicked"
+                        WidthRequest="120"
+                        HorizontalOptions="Center"/>
+                <!--Compass Button-->
                 <Button x:Name="btnChecklist"
                         Grid.Row="2"
                         Grid.Column="1"
                         Text="Compass"
                         Style="{StaticResource normalButton}"
-                        Clicked="btnChecklist_Clicked"/>
+                        Clicked="btnChecklist_Clicked"
+                        WidthRequest="120"
+                        HorizontalOptions="Center"/>
             </Grid>
 
             <Grid x:Name="location_Btn" HorizontalOptions="Center" VerticalOptions="End" Margin="10,10,10,50">

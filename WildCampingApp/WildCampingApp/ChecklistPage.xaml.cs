@@ -39,17 +39,29 @@ namespace WildCampingApp
         //Sensor update speed when in use
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            //Determine the compass heading update speed 
-            Compass.Start(SensorSpeed.Normal);
+            try { 
+                base.OnAppearing();
+                //Determine the compass heading update speed 
+                Compass.Start(SensorSpeed.Normal);
+            }
+            catch
+            {
+                lblCompass.Text = "Feature Not Supported";
+            }
         }
 
         //Turn off when not on page
         protected override void OnDisappearing()
         {
-            base.OnDisappearing();
-            //Stop compass reading
-            Compass.Stop();
+            try { 
+                base.OnDisappearing();
+                //Stop compass reading
+                Compass.Stop();
+            }
+            catch
+            {
+
+            }
         }
 
         //Given a heading find the direction
