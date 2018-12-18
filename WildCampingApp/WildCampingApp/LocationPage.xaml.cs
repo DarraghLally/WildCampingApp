@@ -137,7 +137,7 @@ namespace WildCampingApp
                 //Save location
                 saveLocation();
                 
-            }
+            }//try
             catch (FeatureNotSupportedException fnsEx)
             {
                 lblLocationDisplay_Lat.Text = "Unable to get Location";
