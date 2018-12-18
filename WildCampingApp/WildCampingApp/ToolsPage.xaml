@@ -5,20 +5,23 @@
              BackgroundColor="#000000">
     <ContentPage.Content>
         <StackLayout>
+            <!--ON/OFF button-->
             <Button x:Name="btnTorch"
-                    Text="ON"
+                    Text="PRESS"
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="CenterAndExpand"
                     Clicked="btnTorch_Clicked"
-                    Style="{StaticResource torchButtons}"
-                    />
-            <Button x:Name="btnTorch1"
-                    Text="OFF"
-                    HorizontalOptions="CenterAndExpand"
-                    VerticalOptions="CenterAndExpand"
-                    Clicked="btnTorch1_Clicked"
-                    Style="{StaticResource torchButtons}"
-                    />
+                    Style="{StaticResource torchButtons}"/>
+
+            <!--If Error Display Message-->
+            <Label x:Name="lblError"
+                   Text=""
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Center"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   TextColor="Red"
+                   />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

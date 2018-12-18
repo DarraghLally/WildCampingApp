@@ -19,7 +19,7 @@ namespace WildCampingApp.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState); //GEO-location permissions
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState); //Permissions
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
         }
