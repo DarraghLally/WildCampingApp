@@ -7,18 +7,67 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 //Geo location API
 using Xamarin.Essentials;
+using System.IO;
 
 namespace WildCampingApp
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LocationPage : ContentPage
 	{
-		public LocationPage ()
+        //Constant - File names
+        private const string OUTPUT_FILE_LAT = "lastLatitude.txt";
+        private const string OUTPUT_FILE_LONG = "lastLongitude.txt";
+
+        //Global Variables
+        string saveLat;
+        string saveLong;
+
+        public LocationPage ()
 		{
 			InitializeComponent ();
+            //Load Saved File
+            loadFile();
             //Calling location
             currentLocation();
+            
 		}
+
+        //Load Saved File
+        private void loadFile() {
+            try {
+                //Find default save to folder, save as string
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+                //Point to file
+                string fileLat = Path.Combine(path, OUTPUT_FILE_LAT);
+                string fileLong = Path.Combine(path, OUTPUT_FILE_LONG);
+                //Read from file
+                string inputLastLat = File.ReadAllText(fileLat);
+                string inputLastLong = File.ReadAllText(fileLong);
+                //Display last
+                lblLocationDisplayLast_Lat.Text = inputLastLat;
+                lblLocationDisplayLast_Long.Text = inputLastLong;
+            }
+            catch
+            {
+
+            }
+        }
+
+        //Save Last Known Location
+        private void saveLocation()
+        {
+            //Find default save to folder, save as string
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            //Point to files
+            string fileLat = Path.Combine(path, OUTPUT_FILE_LAT);
+            string fileLong = Path.Combine(path, OUTPUT_FILE_LONG);
+            //Create outputs
+            string outputLat = saveLat;
+            string outputLong = saveLong;
+            //Write to files
+            File.WriteAllText(fileLat, outputLat);
+            File.WriteAllText(fileLong, outputLong);
+        }
 
         //Method for getting current location - code shell from zamarin forms blog
         public async void currentLocation()
@@ -55,6 +104,9 @@ namespace WildCampingApp
                         + " minute's\n" + Math.Abs(latSecondsRound) + " second's";
                     lblLocationDisplay_Lat.Text = outputLat;
 
+                    //Save output to global variable for saving
+                    saveLat = outputLat;
+
                     //**Converting GPS Long to DMS Long              
                     // Getting Degrees and Converting minutes
                     int lonDegrees = (int)location.Longitude;
@@ -79,7 +131,12 @@ namespace WildCampingApp
                     String outputLon = compassHeadingLon + "\n" + Math.Abs(lonDegrees) + " degree's\n" + Math.Abs((int)lonMinutes) 
                         + " minute's\n" + Math.Abs(lonSecondsRound) + " second's";
                     lblLocationDisplay_Long.Text = outputLon;
+                    //Save output to global variable for saving
+                    saveLong = outputLon;
                 }
+                //Save location
+                saveLocation();
+                
             }
             catch (FeatureNotSupportedException fnsEx)
             {
