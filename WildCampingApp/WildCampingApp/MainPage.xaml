@@ -51,7 +51,7 @@
                 <Button x:Name="btnChecklist"
                         Grid.Row="2"
                         Grid.Column="1"
-                        Text="Checklist"
+                        Text="Compass"
                         Style="{StaticResource normalButton}"
                         Clicked="btnChecklist_Clicked"/>
             </Grid>

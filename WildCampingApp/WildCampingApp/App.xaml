@@ -68,7 +68,19 @@
                 <Setter Property="BorderColor"
                         Value="Gold"/>
             </Style>
-            
+
+            <!-- Labels in Compass page -->
+            <Style x:Key="compassLbl" TargetType="Label">
+                <Setter Property="FontSize"
+                        Value="40"/>
+                <Setter Property="FontAttributes"
+                        Value="Bold"/>
+                <Setter Property="FontFamily"
+                        Value="Sanserif"/>
+                <Setter Property="TextColor"
+                        Value="Black"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

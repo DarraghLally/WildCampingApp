@@ -14,7 +14,7 @@
                        Margin="10, 0, 10, 10"
                        BackgroundColor="White">
                     <!--Label to display Lat-->
-                    <Label Text=""
+                    <Label Text="Searching..."
                            x:Name="lblLocationDisplay_Lat"
                            VerticalOptions="CenterAndExpand" 
                            HorizontalOptions="CenterAndExpand"
@@ -28,7 +28,7 @@
                        Margin="10, 0, 10, 10"
                        BackgroundColor="White">
                     <!--Label to display Long-->
-                    <Label Text=""
+                    <Label Text="Searching..."
                            x:Name="lblLocationDisplay_Long"
                            VerticalOptions="CenterAndExpand" 
                            HorizontalOptions="CenterAndExpand"
