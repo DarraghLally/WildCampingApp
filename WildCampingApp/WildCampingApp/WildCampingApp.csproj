@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <None Remove="Assets\Images\112.png" />
+    <None Remove="Assets\Images\arrow.png" />
     <None Remove="Assets\Images\bowline.png" />
     <None Remove="Assets\Images\cloveHitch.png" />
     <None Remove="Assets\Images\knotTerm.png" />
@@ -23,6 +24,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\Images\112.png" />
+    <EmbeddedResource Include="Assets\Images\arrow.png" />
     <EmbeddedResource Include="Assets\Images\sos.png" />
     <EmbeddedResource Include="Assets\Images\STOP.png" />
     <EmbeddedResource Include="Assets\Images\tarpLayout.png" />

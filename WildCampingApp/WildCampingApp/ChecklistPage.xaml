@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WildCampingApp.ChecklistPage">
+             x:Class="WildCampingApp.ChecklistPage"
+             BackgroundColor="Gray">
     <ContentPage.Content>
         <StackLayout>
+            
+            <!--Image-->
+            <Image x:Name="arrowImage" Aspect="AspectFit" VerticalOptions="Center" HeightRequest="240" WidthRequest="281"/>
             <!--Display Compass Heading-->
             <Label x:Name="lblCompass"
                    Text=""
                    VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
+                   HorizontalOptions="CenterAndExpand"
+                   Style="{StaticResource compassLbl}"/>     
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
