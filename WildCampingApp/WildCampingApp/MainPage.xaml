@@ -26,7 +26,6 @@
                     <ColumnDefinition Width="175"/>
                 </Grid.ColumnDefinitions>
 
-
                 <!--Buttons-->
                 <!--Health Button-->
                 <Button x:Name="btnHealth"
